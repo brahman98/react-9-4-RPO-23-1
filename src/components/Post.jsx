@@ -1,30 +1,15 @@
 import Actions from "./Actions";
 
-function Post({author, title, text}) {
+function Post({ author, title, text }) {
     return (
         <div>
+            <article className="post">
+                <h2>{title}</h2>
+                <p className="post-text">{text}</p>
+                <p className="post-author">Автор: {author}</p>
 
-        <article className="post">
-            <h2>{title}</h2>
-            <p className="post-text">{text}</p>
-            <p className="post-author">Автор: {author}</p>
-
-            <Actions />
-        </article>
-        <article className="post">
-            <h2>{title}</h2>
-            <p className="post-text">{text}</p>
-            <p className="post-author">Автор: {author}</p>
-
-            <Actions />
-        </article>
-        <article className="post">
-            <h2>{title}</h2>
-            <p className="post-text">{text}</p>
-            <p className="post-author">Автор: {author}</p>
-
-            <Actions />
-        </article>
+                <Actions />
+            </article>
         </div>
     )
 }
