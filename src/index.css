@@ -57,16 +57,9 @@ main {
   border-bottom: 1px solid #e5e7eb;
 }
 
-.avatar {
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  background: #111827;
-  color: white;
-  border-radius: 50%;
-  font-size: 24px;
-  font-weight: bold;
+.avatar img {
+  width: 100px;
+  height: 100px;
 }
 
 .profile-info h2 {
@@ -84,9 +77,9 @@ main {
   border-bottom: 1px solid #e5e7eb;
 }
 
-.post:last-child {
+/* .post:last-child {
   border-bottom: none;
-}
+} */
 
 .post h2 {
   margin: 0 0 12px;
@@ -131,3 +124,44 @@ main {
   transform: translateY(0);
 }
 
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#post-input, #post-textarea, #post-button {
+  /* border-radius: 10px;
+  padding: 10px;
+  border: ; */
+  padding: 12px 16px;
+  color: #111827; /* Темно-черный текст */
+  background-color: #ffffff; /* Чистый белый фон */
+  border: 1px solid #5e5f60; /* Тонкая серая рамка */
+  border-radius: 8px; /* Стильное легкое скругление */
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+#post-input:focus, #post-textarea:focus {
+  border-color: #111827; /* Рамка становится глубокого черного цвета */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 0 3px rgba(17, 24, 27, 0.05);
+}
+#post-button {
+  width: 30%;
+
+}
+#post-button:hover {
+  border-color: #111827; /* Рамка становится глубокого черного цвета */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 0 3px rgba(17, 24, 27, 0.05);
+}
+
+/* #post-textarea {
+  border-radius: 10px;
+  padding: 10px;
+  height: 100px;
+}
+#post-button {
+  border-radius: 10px;
+  padding: 10px;
+  width: 30%;
+} */
