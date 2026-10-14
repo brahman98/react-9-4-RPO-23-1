@@ -1,33 +1,34 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ProfileCard from "../components/ProfileCard";
 import Post from "../components/Post";
+import { usePosts } from "../context/PostsContext";
 
 function Profile() {
-    const [posts, setPosts] = useState(() => {
-        const savedPosts = localStorage.getItem("posts");
-        if (savedPosts) {
-            return JSON.parse(savedPosts);
-        }
-        return [
-            {
-                id: 1,
-                author: 'Viktor',
-                title: 'Study React for frontend',
-                text: "какой-то осмысленный текст"
-            },
-        ]
-    });
-
+    const { posts, setPosts } = usePosts();
+    // const [posts, setPosts] = useState(() => {
+    //     const savedPosts = localStorage.getItem("posts");
+    //     if (savedPosts) {
+    //         return JSON.parse(savedPosts);
+    //     }
+    //     return [
+    //         {
+    //             id: 1,
+    //             author: 'Viktor',
+    //             title: 'Study React for frontend',
+    //             text: "какой-то осмысленный текст"
+    //         },
+    //     ]
+    // });
 
     const [title, setTitle] = useState('');
     const [text, setText] = useState("");
     const [error, setError] = useState("");
 
-    useEffect(() => {
-        console.log("Количество постов", posts.length);
-        localStorage.setItem("posts", JSON.stringify(posts))
-    }, [posts]
-    );
+    // useEffect(() => {
+    //     console.log("Количество постов", posts.length);
+    //     localStorage.setItem("posts", JSON.stringify(posts))
+    // }, [posts]
+    // );
 
     function addPost(event) {
         event.preventDefault();
@@ -65,7 +66,7 @@ function Profile() {
             <ProfileCard />
             <div className="feed">
                 <h2>Мои публикации</h2>
-                <p>Всего публикаций {posts.length}</p>
+                {/* <p>Всего публикаций {posts.length}</p> */}
 
                 <form className="post-form" onSubmit={addPost}>
                     {error && (

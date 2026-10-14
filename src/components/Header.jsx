@@ -7,16 +7,16 @@ function Header() {
             <p>for communicate</p>
 
             <nav className="navigation">
-                <Link to="/">
+                <Link className="nav-link" to="/">
                     Главная
                 </Link>
-                <Link to="/profile">
+                <Link className="nav-link" to="/profile">
                     Моя страница
                 </Link>
-                <Link to="/settings">
+                <Link className="nav-link" to="/settings">
                     Настройки
                 </Link>
-                <Link to="/about">
+                <Link className="nav-link" to="/about">
                     О проекте
                 </Link>
             </nav>
