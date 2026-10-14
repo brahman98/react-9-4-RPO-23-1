@@ -4,19 +4,21 @@ function Post({ author, title, text, onDelete, id }) {
     return (
         <div>
             <article className="post">
-                <h2>{title}</h2>
+                <div>
+                    <h2>{title}</h2>
+                    {onDelete && (
+                        <button
+                            className="delete-button"
+                            onClick={() => onDelete(id)}>
+                            Удалить
+                        </button>
+                    )}
+                </div>
                 <p className="post-text">{text}</p>
                 <p className="post-author">Автор: {author}</p>
 
                 <Actions />
 
-                {onDelete && (
-                    <button
-                        className="delete-button"
-                        onClick={() => onDelete(id)}>
-                        Удалить
-                    </button>
-                )}
             </article>
         </div>
     )
