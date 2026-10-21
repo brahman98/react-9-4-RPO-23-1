@@ -1,6 +1,7 @@
 // import { useState } from "react";
 // import Post from "./Post";
 import avatar from "../assets/logo.png";
+import { useUser } from "../context/UserContext";
 
 function ProfileCard() {
     // const [posts, setPosts] = useState([
@@ -47,6 +48,7 @@ function ProfileCard() {
     //         posts.filter((post) => post.id !== id
     //         ));
     // }
+    const { userName } = useUser();
 
     return (
         <section className="profile-card">
@@ -55,7 +57,7 @@ function ProfileCard() {
                     <img src={avatar} alt="" />
                 </div>
                 <div className="profile-info">
-                    <h2>Name</h2>
+                    <h2>{userName}</h2>
                     <p>@nickname</p>
                 </div>
             </div>

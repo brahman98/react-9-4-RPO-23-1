@@ -2,6 +2,7 @@ import { useState } from "react";
 import ProfileCard from "../components/ProfileCard";
 import Post from "../components/Post";
 import { usePosts } from "../context/PostsContext";
+import { useUser } from "../context/UserContext";
 
 function Profile() {
     const { posts, setPosts } = usePosts();
@@ -23,6 +24,7 @@ function Profile() {
     const [title, setTitle] = useState('');
     const [text, setText] = useState("");
     const [error, setError] = useState("");
+    const { userName} = useUser();
 
     // useEffect(() => {
     //     console.log("Количество постов", posts.length);
@@ -41,7 +43,7 @@ function Profile() {
             id: Date.now(),
             title: title,
             text: text,
-            author: "Viktor"
+            author: userName
         }
 
         setPosts([...posts, newPost]);
