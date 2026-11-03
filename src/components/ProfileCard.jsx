@@ -48,13 +48,19 @@ function ProfileCard() {
     //         posts.filter((post) => post.id !== id
     //         ));
     // }
-    const { userName } = useUser();
+    const { userName, avatar } = useUser();
 
     return (
         <section className="profile-card">
             <div className="profile">
                 <div className="avatar">
-                    <img src={avatar} alt="" />
+                    {avatar ? (
+                        <img src={avatar} alt="avatar" className="avatar-preview" />
+                    ) : (
+                        <div className="avatar-placeholder">
+                            {userName.charAt(0).toUpperCase() || "?"}
+                        </div>
+                    )}
                 </div>
                 <div className="profile-info">
                     <h2>{userName}</h2>
@@ -64,7 +70,10 @@ function ProfileCard() {
             <p className="profile-description">
                 Frontend developer on React ✔
             </p>
-            
+
+            {/* <div className="profile-avatar">
+
+            </div> */}
             {/* <img src="../assets/logo.png" alt="" /> */}
             {/* <form className="post-form" onSubmit={addPost}>
                 <input
