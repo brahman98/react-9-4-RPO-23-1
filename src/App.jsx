@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import About from "./pages/About";
+import WeatherPage from "./pages/WeatherPage";
 
 function App() {
   const { theme } = useTheme();
@@ -25,6 +26,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/about" element={<About />} />
+              <Route path="/weather" element={<WeatherPage />} />
             </Routes>
           </PostsProvider>
         </UserProvider>
