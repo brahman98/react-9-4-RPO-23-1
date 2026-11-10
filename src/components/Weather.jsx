@@ -24,9 +24,12 @@ function Weather() {
       const responseWeather = await fetch(
         `https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m`);
       const result = await responseWeather.json();
+      console.log("Ответ API:", result);
       if (!responseWeather.ok) {
         throw new Error("Ошибка загрузки погоды");
       }
+      
+      console.log("Current:", result.current);
       setWeather({
         city: place.name,
         temperature: result.current.temperature_2m,
