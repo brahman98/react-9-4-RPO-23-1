@@ -265,6 +265,76 @@ main {
   width: 30%;
 } */
 
+/* ПРОГНОЗ ПОГОДЫ  */
+.weather {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 24px;
+  background: white;
+  color: #222;
+  border: 1px solid black;
+  border-radius: 16px;
+}
+.weather-title {
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+.weather-form {
+  display: flex;
+  gap: 10px;
+}
+.weather-input {
+  flex: 1;
+  padding: 12px;
+  border: 1 px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+.weather-button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2864dc;
+  color: white;
+  cursor: pointer;
+}
+.weather-error {
+  margin-top: 15px;
+  color: #dc2626;
+}
+.weather-result {
+  margin-top: 24px;
+  padding: 20px;
+  background: #f3f5f8;
+  border-radius: 12px;
+}
+.weather-city {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+.weather-temperature {
+  margin: 15px 0;
+  font-size: 42px;
+}
+.weather-details {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.weather-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.weather-item span {
+  color: #777;
+  font-size: 14px;
+}
+.weather-item strong {
+  font-style: 16px;
+}
+
+
 /* КУРС ВАЛЮТ */
 .currency {
   max-width: 600px;
